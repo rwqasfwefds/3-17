@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <h2>5단</h2>
+    <div id="app">
+        <ul>
+            <li v-for = 'item in myArray'>{{item.equation}} {{item.value}}</li>
+        </ul>
+    </div>
+
+    <script>
+        new Vue({
+            el : '#app',
+            data : {
+                myArray : [
+                    {equation : '5 x 1 = ', value : '5'},
+                    {equation : '5 x 2 = ', value : '10'},
+                    {equation : '5 x 3 = ', value : '15'},
+                    {equation : '5 x 4 = ', value : '20'},
+                    {equation : '5 x 5 = ', value : '25'},
+                    {equation : '5 x 6 = ', value : '30'},
+                    {equation : '5 x 7 = ', value : '35'},
+                    {equation : '5 x 8 = ', value : '40'},
+                    {equation : '5 x 9 = ', value : '45'}
+                ]
+            }
+        });
+    </script>
+    
+</body>
+</html>

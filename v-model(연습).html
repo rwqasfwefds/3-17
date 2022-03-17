@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <h2>입력 폼 활용</h2>
+    <!-- Vue 영역 -->
+    <div id="app">
+        <!-- input box를 lazy속성으로 생성 -->
+        이름 : <input type="text" v-model.lazy = "name"> 
+        <br>
+        좋아하는 색 : <br>
+        <label>
+            <!-- input type을 radio 생성하고 value 는 red-->
+            <input type="radio" value="red" v-model = "color">
+            빨강
+        </label>
+        <br>
+       
+        <label>
+            <!-- input type을 radio 생성하고 value 는 green-->
+            <input type="radio" value="green" v-model = "color">
+            녹색
+        </label>
+        <br>
+       
+        <label>
+            <!-- input type을 radio 생성하고 value 는 blue-->
+            <input type="radio" value="blue" v-model = "color">
+            파란색
+        </label>
+        <br>
+      
+        <label>
+            <!-- input type을 radio 생성하고 value 는 yellow-->
+            <input type="radio" value="yellow" v-model = "color">
+            노란색
+        </label>
+        <br>
+     
+        <label>
+            <!-- input type을 radio 생성하고 value 는 gray-->
+            <input type="radio" value="gray" v-model = "color">
+            회색
+        </label>
+        <br>
+        <!-- 이름과 좋아하는 색을 표시해 주세연 -->
+        <!-- 좋아하는 색으로 스타일을 적용하셈 -->
+        <p :style = "{color : color}">내 이름은 {{name}}이고 좋아하는 색은 {{color}}입니다.</p>
+    </div>
+
+    <script>
+        new Vue({
+            el : '#app',
+            data : {
+                name : '',
+                color : ''
+                // color : []
+            }
+        });
+    </script>
+    
+</body>
+</html>

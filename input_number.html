@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <h2>입력을 자동으로 수식 변경하는 예제</h2>
+    <div id="app">
+        <!-- number 이 쉨히는 자동으로 숫자로 변환시켜줌, 원래는 Number()썼잖슴? number걸어주면 안 써도 됨 -->
+        <input v-model.number = "myNumber" type="number">
+        <p>100을 더해서 표시{{myNumber + 100}}</p>
+    </div>
+
+    <script>
+        new Vue({
+            el : '#app',
+            data : {
+                myNumber : ''
+            }
+        });
+    </script>
+    
+</body>
+</html>
